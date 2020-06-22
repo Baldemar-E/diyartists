@@ -33,22 +33,19 @@ tr:nth-child(even) {
   <img src="images/ray3.jpg" alt="11 year old rapper, Ray 3, recording vocals in his bedroom" width="30%" height="30%">
   <p> Today, it is easy to find even children recording their own music in their bedrooms, but recording music wasn't always one smartphone away from possible.
   <br> Various advances in both analog and digital technology have made way toward the democratization of audio production via increased accesibility.
-  <script>
-  function change src (sw) {
-    var pic;
-    if (sw == 0) {
-      pic = "image/portastudio.jpg"
-    } else {
-      pic = "image/crazystudio.jpg"
-    }
-    document.getElementById("studio").src = pic;
-  }
-  </script>
-<img id="studio" src="images/portastudio.jpg" style=width:"30%" height="30%">
-<p>
-<button type="button" onclick="light(1)">Tapes for days</button>
-<button type="button" onclick="light(0)">go crazy in the stu</button>
-</p>
+  <img src="images/portastudio.jpg" id="myImage" width="30%" height="30%">
+      <input type="button" onclick="changeImage()" value="Change" />
+      <script>
+          function changeImage() {
+              var image = document.getElementById('myImage');
+              if (image.src.match("image/crazystudio.jpg")) {
+                  image.src = "images/portastudio.jpg";
+              }
+              else {
+                  image.src = "images/crazystudio.jpg";
+              }
+          }
+      </script>
 
   <table>
     <tr>
